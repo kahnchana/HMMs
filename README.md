@@ -60,7 +60,7 @@ the entire sequence of observations.
 
 
 ## References
-http://stellar.mit.edu/S/course/6/fa12/6.047/courseMaterial/topics/topic2/lectureNotes/Lecture07_HMMsIIb_6up/Lecture07_HMMsIIb_6up.pdf
-https://stats.stackexchange.com/questions/31746/what-is-the-difference-between-the-forward-backward-and-viterbi-algorithms
-https://jyyuan.wordpress.com/tag/hidden-markov-models/
-http://www.cis.upenn.edu/~cis262/notes/Example-Viterbi-DNA.pdf
+* http://stellar.mit.edu/S/course/6/fa12/6.047/courseMaterial/topics/topic2/lectureNotes/Lecture07_HMMsIIb_6up/Lecture07_HMMsIIb_6up.pdf
+* https://stats.stackexchange.com/questions/31746/what-is-the-difference-between-the-forward-backward-and-viterbi-algorithms
+* https://jyyuan.wordpress.com/tag/hidden-markov-models/
+* http://www.cis.upenn.edu/~cis262/notes/Example-Viterbi-DNA.pdf
