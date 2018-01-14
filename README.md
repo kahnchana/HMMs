@@ -17,7 +17,9 @@ observations to predict the state. The probabilities of each observation appeari
 ## Viterbi Algorithm 
 
 We use the relationship,
+
 > P([n,m,l,...],i) = P([m,l,...],i-1) * T(m,n) * O_(n,i) 
+
 where T(m,n) is the transition probability from m to n, and O(n,i) is the 
 observation probability of the relevant observation in given sequence at time i for the state n. P([n,m,l,...],i) is the probability of obtaining the 
 sequence of states [n,m,l,....] at time i. We calculate this probability for all possible present states (varying n), and select the most probable state. 
