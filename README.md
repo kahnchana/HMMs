@@ -42,7 +42,9 @@ We use this to calculate P(x_i+1:n | z_i). This is the conditional probability o
 the state z_i at time i. We will refer to these as conditional observation probabilies. The following relationship is used. 
  
 > P(x_i+1:n | z_i) = sum_over_all_states{ P(x_i+1:n, z_i+1 | z_i,) } 
+
 > P(x_i+1:n | z_i) = sum_over_all_states{ P(x_i+2:n | z_i, z_i+1, x_i+1) * P(x_i+1 | z_i+1, z_i) * P(z_i+1 | z_i) }
+
 > P(x_i+1:n | z_i) = sum_over_all_states{ P(x_i+2:n | z_i+1) * P(x_i+1 | z_i+1) * P(z_i+1 | z_i) }
 
 Using a base case of P(x_n+1 | z_n) = 1 (for all states), we use this algorithm to obtain conditional observation probabilies given a fixed state. 
@@ -53,6 +55,7 @@ We use this to calculate P(z_i | x). This is the conditional probability of stat
 We will refer to these as conditional state probabilies. P(z_i | x) is proportional to P(z_i, x). Hence the following relationship is used. 
  
 > P(z_i, x) = sum_over_all_states{ P(x_i+1:n | z_i, x_1:i ) * P(z_i, x_1:i) } 
+
 > P(z_i, x) = sum_over_all_states{ P(x_i+1:n | z_i ) * P(z_i, x_1:i) } 
 
 We can obtain these values using the individual forward and backward algorithms, and hence compute the conditional probabilies for all states given 
