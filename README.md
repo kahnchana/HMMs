@@ -31,7 +31,10 @@ probabilities are known. This encompasses the basic idea behind the Viterbi Algo
 We use this to calculate P(z_i, x_1:i). This is the joint probability of state z_i at time i and observations [x_1,x_2,....,x_i] until time i. 
 We will refer to these as joint state probabilies. The following relationship is used. 
  
-> P(z_i, x_1:i) = sum_over_all_states{P(z_i, z_i-1, x_1:i)} = sum_over_all_states{P(x_i|z_i, z_i-1, x_1:i-1)*P(z_i|z_i-1,x_1:i-1)*P(z_i-1, x_1:i-1)}
+> P(z_i, x_1:i) = sum_over_all_states{P(z_i, z_i-1, x_1:i)} 
+
+> P(z_i, x_1:i) = sum_over_all_states{P(x_i|z_i, z_i-1, x_1:i-1)*P(z_i|z_i-1,x_1:i-1)*P(z_i-1, x_1:i-1)}
+
 > P(z_i, x_1:i) = sum_over_all_states{ P(x_i|z_i) * P(z_i|z_i-1) * P(z_i-1, x_1:i-1) }
 
 Using a base case of P(z_1, x_1) = P(z_1)*P(x_1|z_1), we use this algorithm to obtain joint state probabilies given a sequence of observations. 
